@@ -12,3 +12,10 @@ nav {
 nav.active {
     max-height: 500px; /* Ajusta la altura máxima que prefieras */
 }
+
+.btn-primary{    
+    @apply uppercase rounded bg-lime-100 text-gray-700 px-12 py-3 font-bold mt-10 shadow-lg shadow-gray-500/50 flex items-center ease-linear duration-200
+}
+.btn-primary:hover{    
+    @apply -translate-y-3 bg-lime-300
+}
