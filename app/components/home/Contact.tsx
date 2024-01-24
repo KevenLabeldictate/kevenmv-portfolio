@@ -3,20 +3,35 @@ import React from 'react'
 import { Formik, Form, Field, ErrorMessage, useFormikContext } from 'formik'
 import * as Yup from 'yup'
 import axios from 'axios'
+
+interface form {
+    name   : string;
+    email  : string;
+    message: string;
+}
+
 const Contact = () => {
-    // Pass the useFormik() hook initial form values and a submit function that will
-    // be called when the form is submitted
-//Validate form
-const formSchema = Yup.object().shape({
-    name: Yup.string()        
-        .required('email is required'),
-    email: Yup.string()
-            .email()
+
+
+/**********************************************************************
+ * TODO function to send info
+ * @param {form} params 
+*/
+    const sendForm = (params: form) => { 
+        console.log(params)
+    }
+
+    //Validate form
+    const formSchema = Yup.object().shape({
+        name: Yup.string()        
+            .required('email is required'),
+        email: Yup.string()
+                .email()
+                .required(),
+        message: Yup.string()
             .required(),
-    message: Yup.string()
-        .required(),
-   
-});
+    
+    });
   return (
     <section id="contact" className='bg-blue-500 text-white'>
         <div className='p-10 md:pt-20'>
@@ -29,12 +44,12 @@ const formSchema = Yup.object().shape({
                 <h2 className="text-2xl font-semibold mb-4">Formulario de ejemplo</h2>
                 <Formik
                     initialValues={{ 
-                        name       : '',
-                        email          : '',
+                        name   : '',
+                        email  : '',
                         message: '',
                     }}
                     validationSchema={formSchema}
-                    onSubmit={(values, actions) => console.log(values, actions)}
+                    onSubmit={(values, actions) => sendForm(values)}
                 >
                     {({values, setFieldValue}) => (
                     <Form>
@@ -84,7 +99,7 @@ const formSchema = Yup.object().shape({
                         {/* Botón de Envío */}
                         <button
                             className="bg-blue-500 hover:bg-blue-700 hover:-translate-y-1 duration-300 text-white font-bold py-3 px-12 rounded focus:outline-none focus:shadow-outline uppercase shadow-lg shadow-gray-500/50"
-                            type="button"
+                            type="submit"
                         >
                             Submit
                         </button>

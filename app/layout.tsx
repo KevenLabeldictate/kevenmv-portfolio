@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Open_Sans } from 'next/font/google'
 import './globals.css'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 // const inter = Inter({ subsets: ['latin'] })
 const openSans = Open_Sans({
@@ -24,6 +25,7 @@ children: React.ReactNode
             <body className='bg-gray-200 mx-auto h-[calc(100vh)]'>
                 <Navbar />
                 {children}
+                <Footer />
             </body>
         </html>
     )
