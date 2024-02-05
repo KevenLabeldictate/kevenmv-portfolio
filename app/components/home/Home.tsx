@@ -4,18 +4,20 @@ import avatar from '@/public/images/avatar.png'
 const Home = () => {
   return (
     <main>
-        <section id="home">
-            <div className='p-10 md:pt-20'>
+        <section id="home" className='mih-h-screen'>
+            <div className='p-10'>
                 <div className='flex flex-col justify-center'>
                     <h1 className='text-3xl md:text-6xl font-bold uppercase text-center mb-8'>Hi, I´m Keven María, Dev</h1>
 
                     <h2 className='text-lg/7 md:text-2xl/10 text-center md:pl-32 md:pr-32 lg:pl-72 lg:pr-72 mb-14'>Hi! I am a web developer building the frontend and backend of websites and web applications, also have experience with Android and IOS mobile applications</h2>
 
-                    <Image 
-                        src={avatar}
-                        alt='Avatar image' 
-                        className='mx-auto w-32 sm:w-48 md:w-72 h-auto'
-                    />
+                    <div className='border-b border-gray-300'>
+                        <Image 
+                            src={avatar}
+                            alt='Avatar image' 
+                            className='mx-auto w-32 sm:w-48 md:w-72 h-auto'
+                        />
+                    </div>
 
                 </div>
 

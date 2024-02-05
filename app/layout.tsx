@@ -20,9 +20,9 @@ export default function RootLayout({
 children: React.ReactNode
 }) {
     return (
-        <html lang="en" className={openSans.className}>
-        {/* <html lang="en" className={inter.className}> */}
-            <body className='bg-gray-200 mx-auto h-[calc(100vh)]'>
+        <html lang="en" className={`${openSans.className} scroll-smooth`}>
+            {/* <body className='bg-gray-200 mx-auto min-h-screen '> */}
+            <body className='bg-gray-200 mx-auto min-h-screen '>
                 <Navbar />
                 {children}
                 <Footer />
