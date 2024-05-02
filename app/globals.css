@@ -56,7 +56,7 @@ article {
     opacity: 0;
   }
   
-  article:hover {
+  article:hover, article:active {
     transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
   }
   
