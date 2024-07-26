@@ -10,8 +10,8 @@ const openSans = Open_Sans({
     display: 'swap',
   })
 export const metadata: Metadata = {
-title: 'Keven Maria Developer',
-description: 'Keven maria developer ths site to show us my developer job. React, React Native, SQL, PHP, Laravel, Javascript, TypeScript',
+    title: 'Keven M. - Developer',
+    description: 'Keven M. "Maria" developer ths site to show us my developer job. React, React Native, SQL, PHP, Laravel, Javascript, TypeScript',
 }
 
 export default function RootLayout({
@@ -22,10 +22,13 @@ children: React.ReactNode
     return (
         <html lang="en" className={`${openSans.className} scroll-smooth`}>
             {/* <body className='bg-gray-200 mx-auto min-h-screen '> */}
-            <body className='bg-gray-200 mx-auto min-h-screen '>
-                <Navbar />
-                {children}
-                <Footer />
+            <body className='bg-gray-200 mx-auto'>
+                <div  className="leading-normal tracking-normal text-gray-900 flex flex-col">
+                    <Navbar />		
+                        {children}
+                    <Footer />
+                </div>
+                
             </body>
         </html>
     )

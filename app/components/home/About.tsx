@@ -98,37 +98,37 @@ const About = () => {
 
         switch (tech) {
             case 'front':
-                color = 'bg-blue-200';
+                color = 'bg-blue-200/70';
                 break;
             case 'backend':
-                color = 'bg-green-200';
+                color = 'bg-green-200/70';
                 break;
             case 'sql':
-                color = 'bg-yellow-200';
+                color = 'bg-yellow-200/70';
                 break;
             case 'nosql':
-                color = 'bg-yellow-200';
+                color = 'bg-yellow-200/70';
                 break;
             case 'other':
-                color = 'bg-gray-200';
+                color = 'bg-gray-200/70';
                 break;
             case 'framework_front':
-                color = 'bg-indigo-200';
+                color = 'bg-indigo-200/70';
                 break;
             case 'framework_back':
-                color = 'bg-purple-200';
+                color = 'bg-purple-200/70';
                 break;
             case 'payments':
-                color = 'bg-lime-200';
+                color = 'bg-lime-200/70';
                 break;
         
             default:
-                color = 'bg-gray-200';
+                color = 'bg-gray-200/70';
                 break;
         }
         
         return (
-            <div className={`${color} rounded pt-3 pb-3 ps-10 pe-10 text-center flex-col items-center `}>
+            <div className={`${color} rounded-full pt-3 pb-3 ps-10 pe-10 text-center flex-col items-center `}>
                 <span className='text-gray-600 font-semibold'>{skill}</span>
             </div>
         )
@@ -160,7 +160,7 @@ const About = () => {
                     <label className='text-xl lg:text-2xl font-bold'>My Skills!</label>
                     <div className='mt-7 flex flex-wrap gap-2'>
                         {
-                            skills.map(e => <Badge tech={e.tech} skill={e.skill}/>)
+                            skills.map((e, i) => <Badge key={i} tech={e.tech} skill={e.skill}/>)
                         }
                     </div>
 				</div>

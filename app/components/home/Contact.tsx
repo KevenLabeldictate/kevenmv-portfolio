@@ -58,7 +58,7 @@ const Contact = () => {
                                 Name
                             </label>
                             <Field
-                                className="appearance-none bg-gray-200 border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline text-gray-800"
+                                className="appearance-none bg-gray-200 border border-gray-300 rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline text-gray-800"
                                 id="name"
                                 name="name"
                                 type="text"
@@ -72,7 +72,7 @@ const Contact = () => {
                                 email
                             </label>
                             <Field
-                                className="appearance-none bg-gray-200 border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline text-gray-800"
+                                className="appearance-none bg-gray-200 border border-gray-300 rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline text-gray-800"
                                 id="email"
                                 name="email"
                                 type="text"
@@ -88,7 +88,7 @@ const Contact = () => {
                             <Field
                                 as='textarea'
                                 rows={10}
-                                className="appearance-none bg-gray-200 border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline text-gray-800"
+                                className="appearance-none bg-gray-200 border border-gray-300 rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline text-gray-800"
                                 id="message"
                                 name="message"
                                 type="text"

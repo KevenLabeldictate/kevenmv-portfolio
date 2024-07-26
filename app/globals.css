@@ -2,22 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* styles/globals.css */
-nav {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out; /* Ajusta la duración y el tipo de transición según tus preferencias */
-}
-  
-nav.active {
-    max-height: 500px; /* Ajusta la altura máxima que prefieras */
-}
-
 .btn-primary{    
     @apply uppercase rounded bg-lime-100 text-gray-700 px-12 py-3 font-bold mt-10 shadow-lg shadow-gray-500/50 flex items-center ease-linear duration-200
 }
 .btn-primary:hover{    
-    @apply -translate-y-3 bg-lime-300
+    @apply -translate-y-1 bg-lime-300
+}
+.btn-primary:focus{    
+    @apply ring-4 outline-none ring-lime-400
 }
 
 .btn-secondary{    
@@ -25,6 +17,9 @@ nav.active {
 }
 .btn-secondary:hover{    
     @apply -translate-y-1 bg-blue-700
+}
+.btn-secondary:focus{    
+  @apply ring-4 outline-none ring-blue-400
 }
 
 /* Hover images styles*/
@@ -83,4 +78,15 @@ article {
   article:hover img:last-child {
     opacity: 1;
     transform: translateY(10%);
+  }
+
+  .project-cs-hero {
+    color: #fff;
+    background: linear-gradient(to right, rgba(245,245,245,0.8), rgba(245,245,245,0.8)),url(/svg/common-bg.svg);
+      background-position-x: 0%, 0%;
+      background-position-y: 0%, 0%;
+      background-size: auto, auto;
+    background-size: cover;
+    background-position: center;
+    position: relative;
   }

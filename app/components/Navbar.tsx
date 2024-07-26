@@ -1,44 +1,24 @@
-'use client'
-
 import Image from 'next/image';
 import Link from 'next/link'
-import React, { useState } from 'react'
-import { FaBars } from 'react-icons/fa';
+import React from 'react'
 import Km from '@/public/images/km.png'
 import Km2 from '@/public/images/km2.png'
+import ToogleBars from './ToogleBars';
+import Navigation from './Navigation';
 const Navbar = () => {
-
-    const [menuOpen, setMenuOpen] = useState(false);
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
     
     return (
-        <header className='bg-gray-200 p-5 flex flex-col md:flex-row items-center justify-between'>
-            <div className="mb-4 md:mb-0 flex items-center">
-                <Link href={'/'}>
-                    <Image src={Km2} alt='Image Placeholder dev' className='w-28 h-auto rounded'/>
-                </Link>
-            </div>
-            {/* <nav className={`md:flex flex-col md:flex-row ${menuOpen ? 'flex' : 'hidden'}`}> */}
-            <nav className={`flex flex-col md:flex-row md:max-h-screen md:overflow-visible md:transition-none transition-max-height ease-in-out duration-300 ${menuOpen ? 'active' : ''}`}>
+        // <header className='w-full mx-auto px-12 py-3 fixed top-0 z-50 bg-white border-b border-stone-100'>
+        <header className='w-full mx-auto px-12 py-3 relative bg-stone-100 border-b border-stone-200'>
+            <div className="w-full flex items-center justify-between">
+                    <Link className='flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl' href={'/'}>
+                        <Image src={Km2} alt='Image Placeholder dev' className='w-28 h-auto rounded'/>
+                    </Link>
 
-                <Link href="#" className="mb-2 md:mb-0 md:ml-20 font-semibold">
-                    Home
-                </Link>
-                <Link href="#about" className="mb-2 md:mb-0 md:ml-20 font-semibold">
-                    About
-                </Link>
-                <Link href="#projects" className="mb-2 md:mb-0 md:ml-20 font-semibold">
-                    Projects
-                </Link>
-                <Link href="#contact" className="mb-2 md:mb-0 md:ml-20 font-semibold">
-                    Contact
-                </Link>
-            </nav>
-            <button onClick={toggleMenu} className={`md:hidden`}>
-                <FaBars />
-            </button>
+                    <Navigation />
+            </div>
+
+
         </header>
     )
 }
